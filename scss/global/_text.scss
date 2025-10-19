@@ -1,0 +1,71 @@
+.text {
+  &-bebas {
+    &-20 {
+      font-family: 'Bebas Neue';
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+  }
+
+
+  &-montserrat {
+    &-14 {
+      font-family: "Montserrat";
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 400;
+    }
+
+    &-16 {
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0%;
+    }
+  }
+
+  &-onest {
+    &-24 {
+      font-family: "Onest", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 100%;
+    }
+  }
+
+  
+  &-title {
+    &-h1 {
+      font-family: 'Bebas Neue';
+      font-size: 60px;
+      line-height: 120%;
+      font-weight: bold;
+
+      & span {
+        color: var(--accent-color);
+      }
+    }
+
+    &-h2 {
+      font-family: 'Bebas Neue';
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 100%;
+
+      & span {
+        color: var(--accent-color);
+      }
+    }
+
+    &-h3 {
+      font-family: 'Bebas Neue';
+      font-size: 24px;
+      font-weight: regular;
+      line-height: 29px;
+    }
+  }
+}

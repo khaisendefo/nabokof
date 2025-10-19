@@ -1,0 +1,66 @@
+.metrics__profit {
+  padding-bottom: 90px;
+
+  &-container {
+    position: relative;
+  }
+
+  &-horseshoe {
+    position: absolute;
+    top: -60px;
+    right: 30px;
+    animation: horseshoe-sway 2.5s ease-in-out infinite;
+    transform-origin: top center; 
+
+    @keyframes horseshoe-sway {
+      0% {
+        transform: rotate(-3deg) translateX(-5px);
+      }
+      50% {
+        transform: rotate(5deg) translateX(3px);
+      }
+      100% {
+        transform: rotate(-3deg) translateX(-3px);
+      }
+    }
+  }
+  
+  &-top {
+    @include flex-column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  &-title, &-description {
+    color: var(--white-color);
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &-card {
+    @include flex-column;
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(112, 112, 112, 0.2);
+
+    &-title {
+      color: var( --accent-color);
+    }
+
+    &-subtitle {
+      color: var(--white-color);
+      margin-bottom: 6px;
+    }
+
+    &-description {
+      color: var(--white-color);
+    }
+  }
+}

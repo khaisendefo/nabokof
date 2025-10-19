@@ -1,0 +1,78 @@
+.container {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  padding: 0 0;
+}
+
+@media (min-width: 300px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1150px;
+  }
+}
+
+@media (min-width: 1560px) {
+  .container {
+    max-width: 1250px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+// .Прямоугольник__скругл__углы_6 {
+//   border-radius: 19px;
+//   background-color: rgb(35, 35, 35);
+//   position: absolute;
+//   left: 310px;
+//   top: 1890px;
+//   width: 1300px;
+//   height: 67px;
+//   z-index: 53;
+// }
+
+// ._1641690853_3_www_funnyart_club_p_kraftovie_foni {
+//   background-image: url("1641690853_3-www-funnyart-club-p-kraftovie-foni-dlya-fotoshopa-3.png");
+//   position: absolute;
+//   left: 0px;
+//   top: 0px;
+//   width: 1920px;
+//   height: 1027px;
+//   z-index: 77;
+// }

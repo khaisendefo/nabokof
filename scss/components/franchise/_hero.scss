@@ -1,0 +1,63 @@
+.hero {
+  overflow: hidden;
+  background: url('../img/franchise/hero-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px 0px 100px 100px;
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    padding-top: 96px;
+    padding-bottom: 151px;
+  }
+
+  &__container {
+    @include flex-between;
+    position: relative;
+  }
+
+  &__decor-eclipse {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__decor-whell {
+    position: absolute;
+    left: 210px;
+    top: 320px;     
+    animation: spin 10s linear infinite;
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: var(--white-color);
+  }
+
+  &__description {
+    margin-bottom: 40px;
+    color: var(--white-color);
+  }
+
+  &__human {
+    position: absolute;
+    top: -110px;
+    right: -240px;
+    z-index: 1;
+  }
+}

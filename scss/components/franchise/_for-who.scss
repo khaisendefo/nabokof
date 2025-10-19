@@ -1,0 +1,57 @@
+.for-who {
+  padding: 30px 0 90px;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 37px;
+  }
+
+  &__card {
+    @include flex-column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    padding: 25px;
+    min-width: 330px;
+    min-height: 280px;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    text-align: center;
+    
+    &-1 {
+      background: url('../img/franchise/for-who/2.png') no-repeat center;
+    }
+
+    &-2 {
+      background: url('../img/franchise/for-who/2.png') no-repeat center;
+    }
+
+    &-3 {
+      background: url('../img/franchise/for-who/3.png') no-repeat center;
+    }
+
+    &-4 {
+      background: url('../img/franchise/for-who/4.png') no-repeat center;
+    }
+
+    &-icon {
+      padding: 9px;
+      border-radius: 10px;
+      background-color: var(--accent-color);
+    }
+
+    &-title {
+      color: var(--white-color);
+    }
+
+    &-description {
+      color: var(--gray-light-color);
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

@@ -1,0 +1,35 @@
+.team {
+  padding-bottom: 90px;
+  
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__card {
+    &-image {
+      margin-bottom: 15px;
+    }
+
+    &-name {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__wrap {
+    max-width: 752px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: 30px;
+  }
+}

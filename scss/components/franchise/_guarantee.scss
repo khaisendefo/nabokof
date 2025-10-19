@@ -1,0 +1,92 @@
+.guarantee {
+  padding-bottom: 90px;
+
+  &__container {
+    position: relative;
+  }
+
+  &__text-bg {
+    position: absolute;
+    top: -110px;
+    left: -240px;
+    width: 550px;
+    animation: textSpin 16s linear infinite;
+
+    @keyframes textSpin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    &-1 {
+      margin-bottom: 30px;
+    }
+
+    &-2 {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+    border-radius: 25px;
+    padding: 25px;
+    background-position: center;
+    background-size: cover;
+
+    &-icon {
+      padding: 9px;
+      border-radius: 10px;
+      background-color: var(--accent-color);
+    }
+
+    &-1 {
+      background: url('../img/franchise/guarantee/1.png') no-repeat;
+    }
+
+    &-2 {
+      background: url('../img/franchise/guarantee/2.png') no-repeat;
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      color: var(--white-color);
+    }
+
+    &-description {
+      color: var(--gray-light-color);
+    }
+  }
+
+  &__wrap {
+    @include flex-column;
+    align-items: center;
+    max-width: 770px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: 36px;
+  }
+}

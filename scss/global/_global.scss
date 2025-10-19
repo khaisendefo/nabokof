@@ -1,0 +1,47 @@
+@import 'text';
+@import 'button';
+@import 'form';
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+* {
+  // font-family: "Montserrat";
+  // font-family: "Bebas Neue", sans-serif;
+  // font-family: "Onest", sans-serif;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+}
+
+$breakpoints: (
+  1400px: 1270px,
+  1300px: 1170px,
+  1200px: 1070px,
+  1100px: 970px,
+  1000px: 870px,
+  900px: 770px,
+  800px: 670px,
+  700px: 570px,
+  600px: 470px,
+  500px: 400px
+);
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1440px;
+  height: 100%;
+
+  @each $breakpoint, $max-width in $breakpoints {
+    @media (max-width: #{$breakpoint}) {
+      max-width: $max-width;
+    }
+  }
+}
+

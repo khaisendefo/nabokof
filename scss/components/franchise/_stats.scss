@@ -1,0 +1,64 @@
+.metrics__stats {
+  padding: 0 0 90px;
+
+  &-container {
+    position: relative;
+  }
+
+  &-gun {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    animation: gun-sway 2s ease-in-out infinite;
+    transform-origin: center bottom; 
+
+    @keyframes gun-sway {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-5px) rotate(-2deg); // вперёд
+      }
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+  }
+
+  &-top {
+    @include flex-column;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+
+  &-title, &-description {
+    color: var(--white-color);
+  }
+
+  &-list {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &-card {
+    @include flex-column;
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(112, 112, 112, 0.2);
+
+    &-title {
+      color: var( --accent-color);
+    }
+
+    &-description {
+      color: var(--white-color);
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.consultation {
+  padding-bottom: 90px;
+
+  &__card {
+    position: relative;
+    border-radius: 40px;
+    background: url('../img/franchise/consultation/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &-inner {
+      position: relative;
+      border-radius: 40px;
+      z-index: 2;
+      overflow: hidden;
+      padding: 75px 0 73px 80px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -150px;
+        right: -30px;
+        z-index: 2;
+        background: url('../img/franchise/consultation/text-bg.png') no-repeat;
+        width: 800px;
+        height: 813px;
+        display: block;
+      }
+    }
+
+    &-human {
+      position: absolute;
+      z-index: 3;
+      top: -30px;
+      right: 30px;
+    }
+    
+
+    &-info {
+      position: relative;
+      z-index: 4;
+      max-width: 485px;
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      color: var(--white-color);
+    }
+
+    &-description {
+      margin-bottom: 46px;
+      color: var(--white-color);
+    }
+
+    &-eclipse {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      
+      &-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+    }
+  }
+}

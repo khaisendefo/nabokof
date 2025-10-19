@@ -1,0 +1,49 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  background: url('../img/franchise/footer.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100px 100px 0px 0px;
+
+  &__eclipse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__eclipse-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__container {
+    @include flex-all-between;
+    position: relative;
+    padding: 50px 15px;
+  }
+
+  &__left {
+    @include flex-align-center;
+    gap: 90px;
+    position: relative;
+    z-index: 2;
+
+    & p, a {
+      color: var(--gray-light-color);
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 10px;
+  }
+  
+  &__text {
+    position: absolute;
+    top: 0;
+    right: -160px;
+  }
+}
