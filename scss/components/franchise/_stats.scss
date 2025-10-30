@@ -1,6 +1,14 @@
 .metrics__stats {
   padding: 0 0 90px;
 
+  @include breakpoint-700 {
+    padding-bottom: 75px;
+  }
+
+  @include breakpoint-500 {
+    padding-bottom: 60px;
+  }
+
   &-container {
     position: relative;
   }
@@ -11,6 +19,16 @@
     left: 0;
     animation: gun-sway 2s ease-in-out infinite;
     transform-origin: center bottom; 
+
+    @include breakpoint-1000 {
+      width: 350px;
+      top: -50px;
+      left: -40px;
+    }
+
+    @include breakpoint-800 {
+      display: none;
+    }
 
     @keyframes gun-sway {
       0% {
@@ -32,9 +50,14 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 35px;
+
+    @include breakpoint-800 {
+      margin-bottom: 20px;
+    }
   }
 
   &-title, &-description {
+    text-align: center;
     color: var(--white-color);
   }
 
@@ -44,6 +67,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+
+    @include breakpoint-1100 {
+      gap: 15px;
+    }
+
+    @include breakpoint-1000 {
+      grid-template-columns: repeat(2, 1fr)
+    }
   }
 
   &-card {
@@ -52,6 +83,10 @@
     border-radius: 15px;
     backdrop-filter: blur(10px);
     background: rgba(112, 112, 112, 0.2);
+
+    @include breakpoint-500 {
+      padding: 20px;
+    }
 
     &-title {
       color: var( --accent-color);

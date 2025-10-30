@@ -6,11 +6,19 @@
   background-position: center;
   border-radius: 100px 100px 0px 0px;
 
+  @include breakpoint-500 {
+    border-radius: 50px 50px 0px 0px;
+  }
+
   &__eclipse {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+
+    @include breakpoint-900 {
+      display: none;
+    }
   }
 
   &__eclipse-2 {
@@ -18,12 +26,21 @@
     top: 0;
     right: 0;
     z-index: 1;
+
+    @include breakpoint-900 {
+      display: none;
+    }
   }
 
   &__container {
     @include flex-all-between;
     position: relative;
     padding: 50px 15px;
+
+    @include breakpoint-900 {
+      flex-direction: column;
+      padding: 40px 0;
+    }
   }
 
   &__left {
@@ -31,6 +48,14 @@
     gap: 90px;
     position: relative;
     z-index: 2;
+
+    @include breakpoint-900 {
+      gap: 20px;
+      margin-bottom: 50px;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
 
     & p, a {
       color: var(--gray-light-color);
@@ -40,10 +65,37 @@
   &__copyright {
     margin-bottom: 10px;
   }
+
+  &__right {
+    @include breakpoint-500 {
+      min-width: 100%;
+    }
+  }
+
+  &__button {
+    @include breakpoint-500 {
+      width: 100%;
+      text-align: center;
+    }
+  }
   
   &__text {
     position: absolute;
     top: 0;
     right: -160px;
+    animation: textSpin 35s linear infinite;
+
+    @include breakpoint-1100 {
+      display: none;
+    }
+
+    @keyframes textSpin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
 }

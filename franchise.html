@@ -37,7 +37,7 @@
                 <a class="header__nav-link text-bebas-20" href="#">Карта</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link text-bebas-20" href="#">Франшиза</a>
+                <a class="header__nav-link header__nav-link-active text-bebas-20" href="#">Франшиза</a>
               </li>
             </ul>
           </nav> 
@@ -50,10 +50,11 @@
           <div class="hero__info">
             <h1 class="hero__title text-title-h1">Франшиза НАБОКОF - <br> собственный барбершоп за 1 месяц <br> <span>с ежемесячным доходом 200 000 ₽+</span></h1>
             <p class="hero__description text-montserrat-16">Проверенный бизнес со 100% окупаемостью через год.</p>
-            <button class="hero__button button">Стать франчайзи</button>
+            <button class="hero__button button modal-open">Стать франчайзи</button>
           </div>
           <div class="hero__right">
-            <img class="hero__human" src="img/franchise/human.png" alt=""> 
+            <img class="hero__image-human" src="img/franchise/hero/human.png" alt=""> 
+            <img class="hero__image-text" src="img/franchise/hero/text.png" alt=""> 
           </div>
         </div>
       </div>
@@ -210,7 +211,7 @@
               <div class="metrics__stats-container container">
                 <img class="metrics__stats-gun" src="img/franchise/gun.png" alt="">
                 <div class="metrics__stats-top">
-                  <h2 class="metrics__stats-title text-title-h2">Показатели барбершопов по нашей франшизе</h2>
+                  <h2 class="metrics__stats-title text-title-h2">Показатели барбершопов <span>по нашей франшизе</span></h2>
                   <p class="metrics__stats-description text-montserrat-14">Показатели барбершопов по нашей франшизе</p>
                 </div>
                 <ul class="metrics__stats-list">
@@ -273,6 +274,8 @@
                   </ul>
 
                   <img class="metrics__timeline-line" src="img/franchise/metric/line.png" alt="">
+                  <!-- <img class="metrics__timeline-line-mobile" src="img/franchise/line.png" alt="">
+                  <img class="metrics__timeline-line-mobile-2" src="img/franchise/line.png" alt=""> -->
   
                   <ul class="metrics__timeline-list metrics__timeline-list-2">
                     <li class="metrics__timeline-card">
@@ -300,6 +303,8 @@
                       <p class="metrics__timeline-card-description text-montserrat-14">Открытие барбершопа. Первые клиенты и выручка</p>
                     </li>
                   </ul>
+
+                  <button class="metrics__timeline-more text-montserrat-14">Смотреть все этапы</button>
                 </div>
 
                 <ul class="metrics__timeline-row">
@@ -373,6 +378,7 @@
                     <p class="metrics__profit-card-description text-montserrat-14">Сроком на 1 год - отлаживает процессы, обучает мастеров и сопровождает франчайзи</p>
                   </li>
                 </ul>
+                <button class="metrics__profit-button button modal-open">Отправить заявку</button>
               </div>
             </div>
           </section>
@@ -518,6 +524,44 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal__overlay"></div>
+    <div class="modal">
+      <div class="modal active">
+        <div class="modal__overlay">
+          <div class="modal__inner">
+            <div class="modal__window">
+               <button class="modal__close">
+                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9705 1.57053C14.3298 1.21125 14.3298 0.62874 13.9705 0.26946C13.6113 -0.08982 13.0287 -0.08982 12.6695 0.26946L7.12 5.81893L1.57055 0.26946C1.21125 -0.08982 0.62874 -0.08982 0.26946 0.26946C-0.08982 0.62874 -0.08982 1.21125 0.26946 1.57053L5.81893 7.12L0.26946 12.6695C-0.08982 13.0288 -0.08982 13.6112 0.26946 13.9706C0.62874 14.3298 1.21125 14.3298 1.57055 13.9706L7.12 8.42108L12.6695 13.9706C13.0287 14.3298 13.6113 14.3298 13.9705 13.9706C14.3298 13.6112 14.3298 13.0288 13.9705 12.6695L8.42108 7.12L13.9705 1.57053Z" fill="white"/>
+                 </svg>                  
+               </button>
+               <div class="modal__info">
+                <h3 class="modal__title text-title-h3">Закажите звонок</h3>
+                <p class="modal__description text-montserrat-14">Наш специалист свяжется с вами и проконсультирует по всем вопросам</p>
+                <form class="modal__form form" action="">
+                  <input class="modal__form-input form-input" placeholder="Ваше имя" type="text">
+                  <input class="modal__form-input form-input" placeholder="Ваш телефон" type="tel">
+                  <button class="modal__form-button form-button button" type="submit">Рассчитать стоимость</button>
+                  <div class="modal__form-row">
+                    <input class="modal__form-checkbox form-checkbox" type="checkbox">
+                    <p class="modal__form-privacy text-montserrat-11">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности.</p>
+                  </div>
+                </form>
+               </div>
+               <div class="modal__image">
+                <img src="img/franchise/modal-img.jpg" alt="">
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
   </div>
+
+  <script src="js/franchise.js"></script>
 </body>
 </html>

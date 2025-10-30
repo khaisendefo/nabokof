@@ -3,9 +3,40 @@
 .header {
   padding: 39px 0 0;
 
+  @include breakpoint-1100 {
+    padding: 25px 0 0;
+  }
+
+  @include breakpoint-500 {
+    padding: 15px 0 0;
+  }
+
   &__container {
     @include flex-between;
     align-items: start;
+
+    @include breakpoint-500 {
+      @include flex-all-center;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 3;
+
+    & img {
+      width: 200px;
+
+      @include breakpoint-1100 {
+        width: 240px;
+      }
+
+      @include breakpoint-800 {
+        width: 200px;
+      }
+    }
+
+    
   }
 
   &__nav {
@@ -13,6 +44,10 @@
     border-radius: 15px;
     backdrop-filter: blur(10px);
     background-color: var(--gray-color);
+
+    @include breakpoint-1100 {
+      display: none;
+    }
 
     &-list {
       display: flex;
@@ -48,6 +83,16 @@
       &:hover::before {
         opacity: 1;
       }
+
+      &-active {
+        color: var(--accent-color--light);
+      }
+    }
+  }
+
+  &__phone {
+    @include breakpoint-500 {
+      display: none;
     }
   }
 }

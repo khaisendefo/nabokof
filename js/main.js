@@ -1,5 +1,5 @@
 const splide = new Splide('.reviews__slider', {
-  type: 'loop', // Бесконечное листание
+  type: 'loop', 
   perPage: 3, 
   perMove: 1,
   pagination: false,

@@ -1,6 +1,14 @@
 .guarantee {
   padding-bottom: 90px;
 
+  @include breakpoint-700 {
+    padding-bottom: 75px;
+  }
+
+  @include breakpoint-500 {
+    padding-bottom:60px;
+  }
+
   &__container {
     position: relative;
   }
@@ -11,6 +19,10 @@
     left: -240px;
     width: 550px;
     animation: textSpin 16s linear infinite;
+    
+    @include breakpoint-1000 {
+      display: none;
+    }
 
     @keyframes textSpin {
       from {
@@ -27,6 +39,10 @@
 
     &-1 {
       margin-bottom: 30px;
+
+      @include breakpoint-700 {
+        margin-bottom: 20px;
+      }
     }
 
     &-2 {
@@ -43,6 +59,14 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 30px;
+
+    @include breakpoint-1000 {
+      gap: 15px;
+    }
+
+    @include breakpoint-900 {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {
@@ -62,10 +86,12 @@
 
     &-1 {
       background: url('../img/franchise/guarantee/1.png') no-repeat;
+      background-size: cover;
     }
 
     &-2 {
       background: url('../img/franchise/guarantee/2.png') no-repeat;
+      background-size: cover;
     }
 
     &-title {

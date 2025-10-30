@@ -1,6 +1,14 @@
 .metrics__profit {
   padding-bottom: 90px;
 
+  @include breakpoint-700 {
+    padding-bottom: 75px;
+  }
+
+  @include breakpoint-500 {
+    padding-bottom: 60px;
+  }
+
   &-container {
     position: relative;
   }
@@ -11,6 +19,15 @@
     right: 30px;
     animation: horseshoe-sway 2.5s ease-in-out infinite;
     transform-origin: top center; 
+
+    @include breakpoint-1100 {
+      width: 130px;
+      right: 0;
+    }
+
+    @include breakpoint-900 {
+      display: none;
+    }
 
     @keyframes horseshoe-sway {
       0% {
@@ -31,9 +48,14 @@
     gap: 10px;
     margin-bottom: 35px;
     text-align: center;
+
+    @include breakpoint-800 {
+      margin-bottom: 20px;
+    }
   }
 
   &-title, &-description {
+    text-align: center;
     color: var(--white-color);
   }
 
@@ -41,6 +63,19 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+
+    @include breakpoint-1100 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-900 {
+      gap: 10px;
+    }
+
+    @include breakpoint-600 {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 30px;
+    }
   }
 
   &-card {
@@ -49,6 +84,10 @@
     border-radius: 15px;
     backdrop-filter: blur(10px);
     background: rgba(112, 112, 112, 0.2);
+
+    @include breakpoint-900 {
+      padding: 20px;
+    }
 
     &-title {
       color: var( --accent-color);
@@ -61,6 +100,16 @@
 
     &-description {
       color: var(--white-color);
+    }
+  }
+
+  &-button {
+    display: none;
+
+    @include breakpoint-600 {
+      display: block;
+      width: 100%;
+      
     }
   }
 }

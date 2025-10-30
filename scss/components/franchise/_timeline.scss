@@ -1,14 +1,27 @@
 .metrics__timeline {
   padding-bottom: 90px;
 
+  @include breakpoint-700 {
+    padding-bottom: 75px;
+  }
+
+  @include breakpoint-500 {
+    padding-bottom: 60px;
+  }
+
   &-top {
     @include flex-column;
     align-items: center;
     gap: 10px;
     margin-bottom: 35px;
+
+    @include breakpoint-800 {
+      margin-bottom: 20px;
+    }
   }
 
   &-title, &-description {
+    text-align: center;
     color: var(--white-color);
   }
 
@@ -17,8 +30,79 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 25px;
 
+    @include breakpoint-1200 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint-800 {
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-700 {
+      position: relative;
+      justify-content: end;
+      grid-template-columns: repeat(1, 90%);
+
+      &::before {
+        content: '';
+        background: url('../img/franchise/line.png') no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 734px;
+        background-size: cover;
+        background-position: center;
+        width: 23px;
+        display: block;
+      }
+    }
+
     &-2 {
       padding: 95px 0 115px;
+
+      @include breakpoint-1200 {
+        padding: 25px 0 90px;
+      }
+
+      @include breakpoint-800 {
+        padding: 10px 0 50px;
+      }
+
+      @include breakpoint-700 {
+        display: none;
+        padding: 10px 0 0;
+        position: relative;
+
+        &.active {
+          display: grid;
+        }
+
+        &::before {
+          content: '';
+          background: url('../img/franchise/line.png') no-repeat;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 734px;
+          background-size: cover;
+          background-position: center;
+          width: 23px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &-more {
+    display: none;
+    color: rgba(228, 203, 132, 1);
+    background: transparent;
+    text-decoration: underline;
+    margin: 22px auto 0;
+    
+    @include breakpoint-700 {
+      display: block;
     }
   }
 
@@ -30,6 +114,42 @@
     position: absolute;
     top: 172px;
     right: -25px;
+
+    @include breakpoint-1400 {
+      top: 200px;
+      width: 1300px;
+    }
+
+    @include breakpoint-1300 {
+      width: 1200px;
+      top: 230px;
+    }
+
+    @include breakpoint-1200 {
+      display: none;
+    }
+
+    // &-mobile {
+    //   display: none;
+
+    //   @include breakpoint-700 {
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //   }
+
+    //   &-2 {
+    //     display: none;
+        
+    //     @include breakpoint-700 {
+    //       display: block;
+    //       position: absolute;
+    //       top:735px;
+    //       left: 0;
+    //     }
+    //   }
+    // }
   }
 
   &-card {
@@ -50,7 +170,8 @@
       top: 0;
       right: 0;
       display: block;
-      background: url('../img/franchise/metric/card-eclipse.png');
+      background: url('../img/franchise/metric/card-eclipse.png') no-repeat;
+      background-size: cover;
       width: 174px;
       height: 174px;
     }
@@ -72,6 +193,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    @include breakpoint-1100 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include breakpoint-800 {
+      display: none;
+    }
 
     &-card {
       @include flex-align-center;
