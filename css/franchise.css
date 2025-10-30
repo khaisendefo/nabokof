@@ -840,7 +840,7 @@ a {
     margin-bottom: 25px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .hero__button {
     width: 100%;
   }
@@ -1182,6 +1182,12 @@ a {
 }
 .guarantee__description {
   margin-bottom: 36px;
+}
+@media (max-width: 600px) {
+  .guarantee__link {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .metrics {
@@ -1999,6 +2005,11 @@ a {
 .promotion__description {
   margin-bottom: 36px;
 }
+@media (max-width: 600px) {
+  .promotion__link {
+    width: 100%;
+  }
+}
 
 .team {
   display: none;
@@ -2258,7 +2269,7 @@ a {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .consultation__card-button {
     width: 100%;
   }
@@ -2379,7 +2390,7 @@ a {
     min-width: 100%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .footer__button {
     width: 100%;
     text-align: center;

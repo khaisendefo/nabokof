@@ -73,7 +73,7 @@
   }
 
   &__button {
-    @include breakpoint-500 {
+    @include breakpoint-600 {
       width: 100%;
       text-align: center;
     }

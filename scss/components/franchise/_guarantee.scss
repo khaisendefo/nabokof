@@ -115,4 +115,11 @@
   &__description {
     margin-bottom: 36px;
   }
+
+  &__link {
+    @include breakpoint-600 {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
